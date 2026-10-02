@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Datta Surikutchi | Finance, Accounting & Accounting Information Systems">
+<title>Datta Surikutchi | Portfolio</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#26384a;background:#fff}
+a{text-decoration:none}
+.container{width:90%;max-width:1120px;margin:auto}
+
+nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #dce4eb}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;color:#12355b}
+.logo span{color:#b3831b}
+.nav ul{list-style:none;display:flex;gap:24px}
+.nav a{color:#34495e;font-size:14px;font-weight:700}
+.nav a:hover{color:#1d6fa5}
+
+.hero{background:linear-gradient(135deg,#f3f7fa,#e7f0f6);padding:75px 0}
+.hero-grid{display:grid;grid-template-columns:1.7fr .8fr;gap:60px;align-items:center}
+.label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b3831b;font-weight:800;margin-bottom:12px}
+h1{font-size:64px;line-height:1.02;color:#12355b;letter-spacing:-2px;margin-bottom:20px}
+h1 span{color:#1d6fa5}
+.statement{font-size:21px;line-height:1.5;color:#52616b;max-width:760px;margin-bottom:25px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:11px 18px;border-radius:7px;font-weight:700;border:1px solid #12355b;display:inline-block}
+.primary{background:#12355b;color:#fff}.primary:hover{background:#1d6fa5;border-color:#1d6fa5}
+.secondary{background:#fff;color:#12355b}.secondary:hover{border-color:#1d6fa5;color:#1d6fa5}
+
+.profile{background:#fff;border:1px solid #d7e1e8;border-radius:16px;padding:25px;box-shadow:0 10px 28px rgba(18,53,91,.08);text-align:center}
+.photo-wrap{width:145px;height:145px;border-radius:50%;margin:0 auto 18px;overflow:hidden;background:#12355b;border:5px solid #e7eef3;display:flex;align-items:center;justify-content:center}
+.photo-wrap img{width:100%;height:100%;object-fit:cover}
+.initials{font-size:40px;font-weight:800;color:#fff}
+.profile h2{font-size:21px;color:#12355b;margin-bottom:5px}
+.profile p{font-size:14px;color:#687b8d}
+.facts{list-style:none;text-align:left;border-top:1px solid #e3e9ee;margin-top:17px;padding-top:12px}
+.facts li{font-size:14px;margin:6px 0}.facts strong{color:#12355b}
+
+section{padding:78px 0}
+.gray{background:#f7f9fb}
+h2.title{font-size:38px;color:#12355b;line-height:1.2;margin-bottom:13px}
+.intro{color:#687b8d;max-width:750px;margin-bottom:35px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.about p{margin-bottom:16px}
+.education{background:#fff;border:1px solid #d7e1e8;border-radius:12px;padding:25px}
+.education h3{font-size:21px;color:#12355b}.school{color:#1d6fa5;font-weight:700;margin:4px 0 12px}
+.education ul{padding-left:20px}.education li{margin:5px 0}
+
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill{border:1px solid #d7e1e8;border-radius:12px;padding:24px;background:#fff}
+.skill h3{color:#12355b;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:#edf4f8;color:#1d5f88;border-radius:5px;padding:6px 9px;font-size:12px;font-weight:700}
+
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project{border:1px solid #d7e1e8;border-radius:13px;padding:25px;background:#fff;display:flex;flex-direction:column}
+.project-number{color:#b3831b;font-size:12px;font-weight:800;letter-spacing:1px;margin-bottom:8px}
+.project h3{color:#12355b;font-size:20px;margin-bottom:10px}
+.project p{color:#617386;font-size:14px;flex:1;margin-bottom:18px}
+.project ul{padding-left:18px;color:#52616b;font-size:13px;margin-bottom:18px}
+.project li{margin:5px 0}
+.project-link{color:#1d6fa5;font-weight:800;font-size:14px}
+.project-link:hover{text-decoration:underline}
+
+.course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.course{padding:17px;background:#fff;border:1px solid #d7e1e8;border-radius:8px;font-weight:700;color:#12355b}
+
+.contact{background:#12355b;color:#fff;text-align:center}
+.contact h2.title{color:#fff}.contact p{max-width:650px;margin:12px auto 25px;color:#d9e2ec}
+.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-links a{color:#fff;border:1px solid #7895ad;border-radius:6px;padding:10px 17px;font-weight:700}
+.contact-links a:hover{background:#fff;color:#12355b}
+
+footer{background:#0c263f;color:#b7c6d3;text-align:center;padding:20px;font-size:13px}
+
+@media(max-width:850px){
+.hero-grid,.two{grid-template-columns:1fr}.skill-grid,.projects{grid-template-columns:1fr 1fr}
+h1{font-size:50px}
+}
+@media(max-width:600px){
+.nav{flex-direction:column;padding:12px 0}.nav ul{gap:12px;flex-wrap:wrap;justify-content:center}
+.hero{padding:55px 0}h1{font-size:42px}.statement{font-size:18px}
+.skill-grid,.projects,.course-grid{grid-template-columns:1fr}
+section{padding:60px 0}h2.title{font-size:31px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#home">Datta<span>.</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="label">Finance • Accounting • AIS • Global Business</div>
+      <h1>Datta<br><span>Surikutchi</span></h1>
+
+      <!-- REQUIRED PERSONAL STATEMENT: one professional sentence -->
+      <p class="statement">
+        I am a Rutgers Business School student pursuing Finance, Accounting, and Accounting Information Systems,
+        with hands-on experience in financial operations, reconciliation, business systems, and organizational leadership.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/datta-surikutchi-6534353aa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <div class="photo-wrap">
+        <!-- Put your headshot in the same GitHub folder and name it exactly: headshot.jpg -->
+        <img src="ds2333@scarletmail.rutgers.edu-d0f4487e.jpg" alt="Headshot of Datta Surikutchi"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <div class="initials" style="display:none;">DS</div>
+      </div>
+
+      <h2>Finance & Accounting Student</h2>
+      <p>Rutgers Business School • Honors College</p>
+
+      <ul class="facts">
+        <li><strong>Location:</strong> Bridgewater, NJ</li>
+        <li><strong>Graduation:</strong> May 2029</li>
+        <li><strong>GPA:</strong> 3.925</li>
+        <li><strong>Concentration:</strong> Global Business</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="about">
+  <div class="container">
+    <div class="label">About Me</div>
+    <h2 class="title">A business student combining finance, accounting & technology.</h2>
+    <p class="intro">
+      My academic and professional experience brings together accounting, finance, business systems,
+      data analysis, and leadership.
+    </p>
+
+    <div class="two">
+      <div class="about">
+        <p>
+          I am pursuing a Bachelor of Science at Rutgers Business School in Finance and Accounting
+          and Accounting Information Systems, with a Global Business concentration.
+        </p>
+        <p>
+          At the Rutgers Student Activities Business Office, I support bookkeeping and financial
+          oversight for more than 100 student organizations and process financial transactions
+          including reimbursements, vendor payments, and check requests.
+        </p>
+        <p>
+          At Rutgers Institutional Planning & Operations, I work with purchase orders, invoices,
+          billing classifications, and university financial systems.
+        </p>
+      </div>
+
+      <div class="education">
+        <h3>Rutgers Business School</h3>
+        <div class="school">Rutgers, The State University of New Jersey</div>
+        <p><strong>Bachelor of Science • May 2029</strong></p>
+        <ul>
+          <li>Finance and Accounting</li>
+          <li>Accounting Information Systems</li>
+          <li>Global Business Concentration</li>
+          <li>Honors College</li>
+          <li>GPA: 3.925</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- REQUIRED SKILLS SECTION -->
+<section class="gray" id="skills">
+  <div class="container">
+    <div class="label">01 — Skills</div>
+    <h2 class="title">Skills for employers.</h2>
+    <p class="intro">
+      Technical, analytical, and professional skills developed through coursework,
+      accounting roles, and student leadership.
+    </p>
+
+    <div class="skill-grid">
+      <div class="skill">
+        <h3>Technical Skills</h3>
+        <div class="tags">
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">Pivot Tables</span>
+          <span class="tag">XLOOKUP</span>
+          <span class="tag">SUMIFS</span>
+          <span class="tag">AssetWorks AiM</span>
+          <span class="tag">Marketplace</span>
+          <span class="tag">FIPO</span>
+          <span class="tag">Oracle NetSuite</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Accounting & Analytical</h3>
+        <div class="tags">
+          <span class="tag">Account Reconciliation</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Financial Recordkeeping</span>
+          <span class="tag">Invoice Processing</span>
+          <span class="tag">Financial Transactions</span>
+          <span class="tag">Critical Thinking</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Professional</h3>
+        <div class="tags">
+          <span class="tag">Time Management</span>
+          <span class="tag">Written Communication</span>
+          <span class="tag">Verbal Communication</span>
+          <span class="tag">Team Collaboration</span>
+          <span class="tag">Leadership</span>
+          <span class="tag">Organization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- REQUIRED PROJECTS SECTION -->
+<section id="projects">
+  <div class="container">
+    <div class="label">02 — Projects</div>
+    <h2 class="title">Selected projects & applied experience.</h2>
+    <p class="intro">
+      These projects highlight practical applications of accounting, financial operations,
+      business systems, and communication. External links are provided as references where
+      a public code repository or live demo is not available.
+    </p>
+
+    <div class="projects">
+
+      <article class="project">
+        <div class="project-number">PROJECT 01</div>
+        <h3>Student Organization Financial Management</h3>
+        <p>
+          Applied bookkeeping and financial oversight across 100+ Rutgers student organizations,
+          supporting accurate financial activity and compliance with university policies.
+        </p>
+        <ul>
+          <li>Processed 200+ financial transactions</li>
+          <li>Handled reimbursements, vendor payments, and check requests</li>
+          <li>Performed account reconciliations and identified discrepancies</li>
+        </ul>
+        <a class="project-link" href="https://sabo.rutgers.edu/" target="_blank" rel="noopener noreferrer">
+          Rutgers SABO reference ↗
+        </a>
+      </article>
+
+
+      <article class="project">
+        <div class="project-number">PROJECT 02</div>
+        <h3>University Invoice & Purchase Order Workflow</h3>
+        <p>
+          Applied financial operations and business-system skills through Rutgers Institutional
+          Planning & Operations, working with purchase orders, invoices, billing classifications,
+          and financial tracking.
+        </p>
+        <ul>
+          <li>Worked with AssetWorks AiM and FIPO</li>
+          <li>Reviewed contractor, material, and equipment charges</li>
+          <li>Prepared transportation invoices and billing documentation</li>
+        </ul>
+        <a class="project-link" href="https://construction.rutgers.edu/business-services" target="_blank" rel="noopener noreferrer">
+          Rutgers Business Services reference ↗
+        </a>
+      </article>
+
+
+      <article class="project">
+        <div class="project-number">PROJECT 03</div>
+        <h3>Campus Outreach & Communications Campaign</h3>
+        <p>
+          Led digital outreach for the Douglass Governing Council, creating promotional content
+          and coordinating communications for campus initiatives and events.
+        </p>
+        <ul>
+          <li>Reached 1,000+ students through social media communications</li>
+          <li>Promoted 5+ events each semester</li>
+          <li>Designed promotional content and coordinated outreach</li>
+        </ul>
+        <a class="project-link" href="https://studentaffairs.rutgers.edu/" target="_blank" rel="noopener noreferrer">
+          Rutgers Student Affairs reference ↗
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="gray" id="experience">
+  <div class="container">
+    <div class="label">03 — Experience</div>
+    <h2 class="title">Professional & leadership experience.</h2>
+    <p class="intro">Experience across accounting, budgeting, operations, communication, and professional development.</p>
+
+    <div class="two">
+      <div class="education">
+        <h3>Rutgers Student Activities Business Office</h3>
+        <div class="school">Accountant / Bookkeeper • Sep 2025 – Present</div>
+        <p>Financial oversight, bookkeeping, transaction processing, and account reconciliation for 100+ student organizations.</p>
+      </div>
+
+      <div class="education">
+        <h3>Rutgers Institutional Planning & Operations</h3>
+        <div class="school">Student Worker — Business Services, Accounting & Budgeting • Aug 2026 – Present</div>
+        <p>Purchase orders, IPOs, invoices, billing classifications, and financial tracking using university systems.</p>
+      </div>
+
+      <div class="education">
+        <h3>Douglass Governing Council</h3>
+        <div class="school">Secretary, Executive Board • May 2026 – Present</div>
+        <p>Meeting communications, agendas, minutes, attendance records, documentation, and organizational coordination.</p>
+      </div>
+
+      <div class="education">
+        <h3>Beta Alpha Psi</h3>
+        <div class="school">Member • Jan 2026 – Present</div>
+        <p>Professional development, networking, technical accounting sessions, service, and mentorship opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="label">04 — Coursework</div>
+    <h2 class="title">Academic foundation.</h2>
+    <p class="intro">Selected coursework relevant to finance, accounting, business technology, and quantitative analysis.</p>
+
+    <div class="course-grid">
+      <div class="course">Introduction to Financial Accounting</div>
+      <div class="course">Computer Applications for Business</div>
+      <div class="course">Basic Statistics for Research</div>
+      <div class="course">Business Writing Essentials</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="label">05 — Contact</div>
+    <h2 class="title">Let's connect.</h2>
+    <p>
+      I am interested in opportunities related to accounting, finance,
+      financial operations, business systems, and professional development.
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:ds2333@scarletmail.rutgers.edu">Email</a>
+      <a href="tel:+19086443946">Phone</a>
+      <a href="https://www.linkedin.com/in/datta-surikutchi-6534353aa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Datta Surikutchi • Rutgers Business School
+</footer>
+
+</body>
+</html>
